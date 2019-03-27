@@ -48,7 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\DbFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
+    <Compile Include="Infrastructure\IRepository.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\RepositoryBase.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ProductCategoryRepository.cs" />
+    <Compile Include="ShopKDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -59,6 +68,11 @@
       <Project>{fceee1d4-ba16-443c-a583-ba2957d7e7a0}</Project>
       <Name>ShopK.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ShopK.Model\ShopK.Model.csproj">
+      <Project>{f4e9ae0b-28e7-4aee-9957-d23d65636140}</Project>
+      <Name>ShopK.Model</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
